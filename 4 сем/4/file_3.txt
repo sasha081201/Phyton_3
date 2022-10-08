@@ -1,0 +1,5 @@
+Function call time =1665268798.3696468
+Function shutdown time = 1665268798.3696468
+Function operation time =0.0
+Incoming arguments =(1, 2, 3)
+Result =-
