@@ -19,6 +19,6 @@ if __name__ == '__main__':
         sys.exit('Invalid number of arguments')
     parser = createParser()
     args = parser.parse_args(sys.argv[1:])
-    print("shit")
+    print("wrong")
     N = int(sys.argv)
     print(Fibanachi(N))
