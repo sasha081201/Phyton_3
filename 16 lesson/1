@@ -1,0 +1,63 @@
+# ваш код здесь
+#1
+a = np.arange(12, 43, 1)
+print("1. Создайте вектор с эелементами от 12 до 42:\n", a)
+
+#2
+b = np.zeros((12, ))
+b[4] = 1
+print("2. Создайте вектор из нулей длины 12, но его пятый елемент должен быть равен 1:\n", b)
+
+#3
+v = np.arange(0, 9, 1)
+d = v.reshape((3, 3))
+print("3. Создайте матрицу (3, 3), заполненую от 0 до 8:\n", d)
+
+#4
+m =np.array([1,2,0,0,4,0])
+bool_idx =(m > 0)
+print("4. Найдите все положительные числа в np.array([1,2,0,0,4,0]):\n", m[bool_idx])
+
+#5
+a = np.ones((5, 3))
+b = np.full((3, 2), 8)
+c = np.dot(a, b)
+print(a)
+print(b)
+print(c)
+
+#6
+a = np.ones((10,10))
+a[0, :] = 0
+a[:, 0] = 0
+a[9, :] = 0
+a[:, 9] = 0
+print(a)
+
+#7
+v = np.random.randint(0, 10, 6)
+print(v)
+m = np.sort(v)
+print(m)
+
+#8: np.reshape()
+#9.  *Создайте рандомный вектор и выполните нормализацию столбцов (из каждого столбца вычесть среднее этого столбца, из каждого столбца вычесть sd этого столбца)
+v = np.random.randint(0, 10, 6)
+
+print(v)
+m = np.mean(v)
+print("avarage mean:\n", m, "\n result matrix\n", v -m)
+result = np.std(v)
+print(result)
+print(v - result)
+
+#10
+index = (np.abs(v - m)).argmin()
+print("nearest number:\n", v[index])
+
+#10
+v = np.random.randint(0, 10, 6)
+print(v)
+n = 2
+z = v[np.argpartition(-v, n)[:n]]
+print(z)
