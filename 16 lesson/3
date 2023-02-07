@@ -1,13 +1,12 @@
-import math 
 import numpy as np
 import matplotlib.pyplot as plt
-import numpy.linalg
 
+import math 
 def F1(x):
     return math.sin(int(x)/5)*math.exp(int(x)/ 10) + 5*math.exp(-int(x)/ 2)
 
 f2 = np.vectorize(F1)
-plot = plt.subplot2grid((3, 3), (2, 0), rowspan=3, colspan=2)
+#plot = plt.subplot2grid((3, 3), (2, 0), rowspan=3, colspan=2)
 
 a3 = np.array([[1, 1, 1, 1], [1, 4, 16, 64], [1, 10, 100, 1000], [1, 15, 225, 3375]])
 b3 = np.array([F1(1), F1(4),F1(10),F1(15)])
@@ -28,7 +27,7 @@ print(c1)
 plt.plot(x1, y1, color = "green")
 
 
-a2 = np.array([[1, 1, 1], [1, 8, 16], [1, 15, 30]])
+a2 = np.array([[1, 1, 1], [1, 8, 64], [1, 15, 225]])
 b2 = np.array([F1(1),F1(8), F1(15)])
 c2 = np.linalg.solve(a2, b2)
 print(c2)
